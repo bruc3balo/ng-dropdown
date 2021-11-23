@@ -1,0 +1,12 @@
+{{selectedQuarterList|json}}
+<ng-multiselect-dropdown
+          [placeholder]="'Select quarter(s)'"
+          [settings]="dropdownSettings"
+          [data]="quarterList"
+          [(ngModel)]="selectedQuarterList"
+          (onDropDownClose)="onDropdownClose()"
+          (click)="this.isDropdownOpen = true"
+          (onSelect)="onItemSelect($event,true)"
+          (onDeSelect)="onItemSelect($event,false)"
+        >
+        </ng-multiselect-dropdown>
